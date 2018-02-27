@@ -1,0 +1,50 @@
+{{ partial "header.html" . }}
+<script src="{{ "js/siema.min.js" | absURL }}"></script>
+<div class="siema">
+  {{ range .Site.Data.slides.slides }}
+  <div class="twentyone-nine"><div class="content" style="background-image: url('{{.}}')"></div></div>
+  {{ end }}
+</div>
+<section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+  <div class="w-90 w-70-ns tc center f4 tj dark-gray">
+    {{.Content}}
+    {{ range .Params.links }}
+      <a href="{{ .link }}" class="link ba bg-dark-blue ph2 pv1 br2 white hover-bg-white hover-blue bw1">Read More</a>
+      {{ end }}
+  </div>
+</section>
+
+<script src="{{ "js/lory.min.js" | absURL }}"></script>
+<div class="slider js_variablewidth_brands variablewidth">
+  <div class="frame js_frame" style="margin-top: 116px;">
+    <ul class="slides js_slides">
+      {{ range .Site.Data.brands.brands }}
+        <li class="js_slide aspect-ratio--16*9 z-1 bg-center cover " style="background-image: url(' {{ (trim .image "/") | absURL }}')">
+      </li>
+        {{end}}
+    </ul>
+  </div>
+  <span class="js_prev prev">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
+  </span>
+
+  <span class="js_next next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
+  </span>
+</div>
+
+{{ partial "footer.html" . }}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var variableWidth = document.querySelector('.js_variablewidth_brands');
+    lory(variableWidth, {
+    rewind: true
+    });
+  });
+
+  if(siema_interval){
+    clearInterval(siema_interval)
+  }
+  var mySiema=new Siema({duration:250,loop:true,});
+  var siema_interval = setInterval(()=>mySiema.next(),5000)
+</script>

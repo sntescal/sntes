@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+  <div class="ph3 ph4-m ph5-l ">
+    <section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+  <div class="w-100 tc f4 tj dark-gray">
+    {{.Content}}
+  </div>
+</section>
+  <main class="flex items-stretch items-start flex-wrap pb1">
+    <h2 class="w-100 f1 tc black">AWARDS</h2>
+    {{ range .Params.awards }}
+    <div class="ph3 w-100 w-third-m w-25-l mb5 tc gallery">
+      <div class="aspect-ratio aspect-ratio--16x9 br2 br--top w-100 overflow-hidden z-1">
+       <div class="aspect-ratio--object contain bg-center" style="background-image: url('{{ ( trim .image "/" ) | absURL}}')"></div>
+      </div>
+    </div>
+    {{ end }}
+  </main>
+</div>
+{{ partial "footer-brand.html" . }}
+{{ partial "footer.html" . }}

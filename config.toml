@@ -1,0 +1,4 @@
+baseURL = "http://sntes.netlify.com/"
+languageCode = "en-us"
+title = "SNTES"
+theme = "sm-sntes"

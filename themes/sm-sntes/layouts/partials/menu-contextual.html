@@ -1,0 +1,20 @@
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $currentSection := (where .Site.RegularPages "Section" .Section) }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<div class="w-100 w-60-m w-40-l br2 ">
+  <ul class="list-reset mb3" style="list-style: none;">
+    {{ range $currentSection.ByTitle }}
+      <li class="ph3 pv3">
+        <a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+<div class="w-100 mb3 tc">
+  <a href="" class="link bg-animate center ph4 pv3 bg-navy hover-bg-navy white f3 ttu tracked br2">Download brochure</a>
+</div>
+<div class="px2 md-px4 py4">
+  <div class="flex items-start items-stretch flex-wrap justify-center mxn2">
+    {{range .Params.list}}
+    <div class="fl w-third pa2">
+      <div class="br2 ba dark-gray b--black-10 mv4  mw5 center ">
+        <div class="aspect-ratio aspect-ratio--16x9 br2 br--top w-100 overflow-hidden z-1">
+          <div class="aspect-ratio--object contain" style="background-image: url('{{ ( trim .image "/" ) | absURL}}')"></div>
+        </div>
+        <div class="pa2 ph3-ns pb3-ns">
+        <p class="f6 lh-copy measure mt2 ttu b navy">
+          {{.title}}
+        </p>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{/* Get the current page's URL so we can compare it to the list below */}}
+{{ $currentPageUrl := .URL }}
+{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
+{{ $currentSection := (where .Site.RegularPages "Section" .Section) }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+  <div class="flex item-start mxn2 flex-wrap pt1 justify-center">
+    {{ range $currentSection.ByTitle }}
+    <div class="px2">
+      <a href="{{ .URL }}" class="{{ if eq $currentPageUrl .URL }} active{{end}} f6 f5-l link 
+      navy bg-animate black-80 hover-bg-navy hover-white dib pa3 ph4-l ttu">{{ .Title }}</a>
+    </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{ partial "footer-brand.html" . }}
+{{ partial "footer.html" . }}

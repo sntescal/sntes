@@ -16,17 +16,10 @@ collections:
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Link, name: link, widget: string}
-        - {label: Content, name: body, widget: markdown}
-- label: "Data"
-  name: "data"
-  files:
-    - label: "Slides"
-      name: "slides"
-      file: "data/slides.yml"
-      fields:
         - label: Slides
           name: slides
           widget: list
           fields:
             - {label: Image, name: image, widget: image}
+        - {label: Content, name: body, widget: markdown
             

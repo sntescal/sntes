@@ -15,7 +15,7 @@ collections:
         - {label: Seo Title, name: seo_title, widget: string, required: false}
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Link, name: link, widget: string, required: false}
+        - {label: Link, name: link, widget: string}
         - label: Slides
           name: slides
           widget: list

@@ -4,6 +4,12 @@ seo_keywords: SNTES
 seo_description: SNTES
 links:
   - link: /about
+slides:
+  - image: images/68.jpg
+  - image: images/70.jpg
+  - image: images/71.jpg
+  - image: images/72.jpg
+  - image: images/73.jpg
 ---
 
 ### Shree Nursing Timber & Electric Store

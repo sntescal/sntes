@@ -1,14 +1,25 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
-<div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-  <div class="fl w-100 w-70-l pa2 shadow-1">  
-    <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
-      <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
-    </div>
-    <div class="content mb5">
+  <!-- <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
+      <main class="pr4-l w-100 w-70-l">
+        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+          <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+        </div>
+        <div class="content mb5">
           {{ .Content }}
-    </div>
-  </div>
+        </div>
+      </main>
+      {{ partial "menu-contextual.html" . }}
+  </div> -->
+  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
+      <main class="pr4-l w-100 w-70-l">
+        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+          <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+        </div>
+        <div class="content mb5">
+          {{ .Content }}
+        </div>
+      </main>
       {{ partial "menu-contextual.html" . }}
   </div>
 {{ partial "footer-brand.html" . }}

@@ -10,7 +10,7 @@
     <link href="{{ "css/main.css" | absURL }}" rel="stylesheet" type="text/css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <script src="{{ "js/turbolinks.js" | absURL }}"></script>
+    <!-- <script src="{{ "js/turbolinks.js" | absURL }}"></script> -->
   </head>
   <body class="pt4">
     <header>
@@ -28,18 +28,18 @@
           <a class="link pa2 ttu f6 navy b dib" href="/contact" data-turbolinks="false">Contact</a>
         </div>
         <div class="tr db dn-l ba pa2 br2 pointer" onclick="toggle_mobile_menu()">
-          <div class="bg-navy mb1" style="height:5px; width:35px;"></div>
-          <div class="bg-navy mb1" style="height:5px; width:35px;"></div>
-          <div class="bg-navy" style="height:5px; width:35px;"></div>
+          <div class="bg-navy mb1" style="height:4px; width:30px;"></div>
+          <div class="bg-navy mb1" style="height:4px; width:30px;"></div>
+          <div class="bg-navy" style="height:4px; width:30px;"></div>
         </div>
         <div id="mobile_nav" class="fixed top-0 right-0 bottom-0 w-80 w-50-m bg-white z-5 shadow-2 pv3 ph3 ph4-m dn">
-          <div class="flex items-center">
-            <a href="/" class="link f3 ttu tracked orange b db flex-auto">SNTES</a>
+          <div class="flex items-start">
+            <a href="/" class="link flex-auto"><img src="{{ (trim .Site.Data.meta.logo "/") | absURL }}" alt="Adiba Infotech" class="nt1" style="max-height:90px;"></a>
             <div class="tr db ba ph2 pv1 br2 pointer b lh-solid f3 b-black black" onclick="toggle_mobile_menu()">X</div>
           </div>
           <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/">Home</a>
           <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/about">About</a>
-          <a class="link pa2 ttu f6 navy b db bb b--black-20 db" href="/product">Product</a>
+          <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/product">Product</a>
           <a class="link pv3 ttu f6 navy b db bb b--black-20 db" href="/contact" data-turbolinks="false">Contact</a>
         </div>
       </nav>

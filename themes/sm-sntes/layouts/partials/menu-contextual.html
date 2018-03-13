@@ -6,10 +6,13 @@
 {{ $i := sub ($currentSection | len) 1 }}
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 1 }}
-<div class="w-100 w-60-m w-40-l br2 ">
+<div class="w-100 w-60-m w-30-l br2 ">
+  <div class="bb bw1 pa2 ml4 red">
+    <a href="/product" class="link f6 f3-ns ttu tracked navy b">Product</a>
+  </div>
   <ul class="list-reset mb3" style="list-style: none;">
-    {{ range $currentSection.ByTitle }}
-      <li class="ph3 pv3">
+    {{ range sort $currentSection "Params.order" }}
+      <li>
         <a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps">
           {{ .Title }}
         </a>

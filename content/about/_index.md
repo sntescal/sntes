@@ -2,7 +2,7 @@
 title: "About"
 seo_keywords: "SNTES"
 seo_description: "SNTES"
-featured_image: "images/68.jpg"
+featured_image: "images/product2.jpg"
 ---
 
 Established in the Year 1958 as a trading house dealing in electrical items, today "Mundhra" has emerged as a leading supplier of wide range of electrical products to a wide variety of usersincluding local traders, Government Departments and Industrial clients.

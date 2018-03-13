@@ -2,12 +2,24 @@
 {{ partial "page_title.html" . }}
 <link href='{{ "dist/bb.min.css" | absURL}}' rel="stylesheet"/>
 <script type="text/javascript" src='{{ "dist/bb.min.js" | absURL}}'></script>
+ <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
+      <main class="pr4-l w-100 w-60-l">
+        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+          <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+        </div>
+      </main>
+      <main class="pr4-l w-100 w-60-l bg-near-white ">
+        <div class="content ml3 b">
+          {{ .Content }}
+        </div>
+      </main>
+  </div>
 <div class="ph3 ph4-m ph5-l ">
-  <section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+  <!-- <section class="pv5 bg-near-white ph3 ph4-m ph5-l">
     <div class="w-100 tc f4 tj dark-gray">
       {{.Content}}
     </div>
-  </section>
+  </section> -->
     <h2 class="w-100 f1 tc navy">AWARDS</h2>
   <main class="flex items-stretch items-start flex-wrap pb1 gallery">
     {{ range .Site.Data.awards.awards }}

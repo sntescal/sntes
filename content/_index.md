@@ -2,7 +2,8 @@
 title: SNTES
 seo_keywords: SNTES
 seo_description: SNTES
-link: /about
+links:
+  - link: /about
 slides:
   - image: images/68.jpg
   - image: images/70.jpg

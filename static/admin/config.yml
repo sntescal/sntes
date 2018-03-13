@@ -29,7 +29,7 @@ collections:
       name: "brands"
       file: "data/brands.yml"
       fields:
-        - label: Arands
+        - label: Brands
           name: brands
           widget: list
           fields:

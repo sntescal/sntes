@@ -4,8 +4,6 @@ seo_keywords: MRD Finance
 seo_description: MRD Finance
 featured_image: images/73.jpg
 ---
-
-‘We are the support to help you grow and achieve the best’
  
 ## Our Products
 

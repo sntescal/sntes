@@ -7,6 +7,7 @@ order: 4
 list:
   - description: >-
     image: images/pro4.jpg
+    title: Wire
 ---
 
 

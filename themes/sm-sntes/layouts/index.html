@@ -6,11 +6,13 @@
   {{ end }}
 </div>
 <section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+  <h2 class="f2 f1-ns w-100 f1 tc black ttu mt0">About</h2>
+  {{ partial "separator.html" . }}
   <div class="w-90 w-70-ns tc center f4 tj dark-gray">
     {{.Content}}
     {{ range .Params.links }}
-      <a href="{{ .link }}" class="link ba bg-dark-blue ph2 pv1 br2 white hover-bg-white hover-blue bw1">Read More</a>
-      {{ end }}
+      <a href="{{ .link }}" class="link ba b--dark-blue bg-white ph2 pv1 br2 dark-blue hover-bg-dark-blue hover-white bw1 dib mv2">Read More</a>
+    {{ end }}
   </div>
 </section>
 

@@ -3,6 +3,7 @@ title: Luminaries
 seo_keywords: SNTES
 seo_description: SNTES
 featured_image: images/pro3.jpg
+order: 3
 list:
   - description: >-
     image: images/pro3.jpg

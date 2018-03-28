@@ -3,6 +3,7 @@ title: HT & LT Cables
 seo_keywords: SNTES
 seo_description: SNTES
 featured_image: images/pro1.jpg
+order: 2
 list:
   - description: >-
     image: images/pro1.jpg

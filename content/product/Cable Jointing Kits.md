@@ -3,6 +3,7 @@ title: Cable Jointing Kits
 seo_keywords: SNTES
 seo_description: SNTES
 featured_image: images/pro2.jpg
+order: 1
 list:
   - description: >-
     image: images/pro2.jpg

@@ -2,35 +2,35 @@
 {{ partial "page_title.html" . }}
 <link href='{{ "dist/bb.min.css" | absURL}}' rel="stylesheet"/>
 <script type="text/javascript" src='{{ "dist/bb.min.js" | absURL}}'></script>
- <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap flex-nowrap-l pb5">
-      <main class="pr4-l w-100 w-60-l">
-        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
-          <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
-        </div>
-      </main>
-      <main class="pr4-l w-100 w-60-l bg-near-white ">
-        <div class="content ml3 b">
-          {{ .Content }}
-        </div>
-      </main>
+  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap  
+   flex-nowrap-l pb5">
+    <main class="pr4-l w-100 w-60-l">
+      <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+        <div class="aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+      </div>
+    </main>
+    <main class="pa3 pa4-ns w-100 w-60-l bg-near-white ">
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </main>
   </div>
-<div class="ph3 ph4-m ph5-l ">
-  <!-- <section class="pv5 bg-near-white ph3 ph4-m ph5-l">
-    <div class="w-100 tc f4 tj dark-gray">
-      {{.Content}}
-    </div>
-  </section> -->
-    <h2 class="w-100 f1 tc navy">AWARDS</h2>
-  <main class="flex items-stretch items-start flex-wrap pb1 gallery">
-    {{ range .Site.Data.awards.awards }}
-    <div class="ph3 w-100 w-third-m w-25-l mb5 tc">
-     <a href="{{ (trim .image "/") | absURL }}" class="block mb2 ">
+<section class="pv5 bg-near-white ph3 ph4-m ph5-l">
+<h2 class="f2 f1-ns w-100 f1 tc black ttu mt0">AWARDS</h2>
+{{ partial "separator.html" . }}
+  <div class="ph3 ph4-m ph5-l" >
+    <main class="flex items-stretch items-start flex-wrap pb1 gallery mb4">
+      {{ range .Site.Data.awards.awards }}
+      <div class="ph3 w-100 w-third-m w-25-l mb4 tc">
+        <a href="{{ (trim .image "/") | absURL }}" class="db mb2 bg-light-gray ba b--moon-gray pa2">
           <div class="square"><div class="content" style="background-image:url('{{ (trim .image "/") | absURL }}')"></div></div>
           </a>
-    </div>
-    {{ end }}
-  </main>
-</div>
+      </div>
+      {{ end }}
+    </main>
+  </div>
+</section>
+
 {{ partial "footer-brand.html" . }}
 {{ partial "footer.html" . }}
 

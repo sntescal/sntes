@@ -11,18 +11,16 @@
   <div class="w-90 w-70-ns tc center f4 tj dark-gray">
     {{.Content}}
     {{ range .Params.links }}
-      <a href="{{ .link }}" class="link ba b--dark-blue bg-white ph2 pv1 br2 dark-blue hover-bg-dark-blue hover-white bw1 dib mv2">Read More</a>
+    <a href="{{ .link }}" class="link ba b--dark-blue bg-white ph2 pv1 br2 dark-blue hover-bg-dark-blue hover-white bw1 dib mv2">Read More</a>
     {{ end }}
   </div>
 </section>
-
 {{ partial "footer-brand.html" . }}
 {{ partial "footer.html" . }}
 <script>
-
-  if(siema_interval){
-    clearInterval(siema_interval)
-  }
-  var mySiema=new Siema({duration:250,loop:true,});
-  var siema_interval = setInterval(()=>mySiema.next(),5000)
+if(siema_interval){
+clearInterval(siema_interval)
+}
+var mySiema=new Siema({duration:250,loop:true,});
+var siema_interval = setInterval(()=>mySiema.next(),5000)
 </script>

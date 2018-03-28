@@ -2,7 +2,7 @@
 title: Products
 seo_keywords: MRD Finance
 seo_description: MRD Finance
-featured_image: images/73.jpg
+featured_image: images/light.jpg
 ---
  
 ## Our Products

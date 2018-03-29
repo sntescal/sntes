@@ -1,0 +1,18 @@
+{{ $currentSection := (.Sections) }}
+{{/* Get the number of entries of  $currentSection and subtract 1 */}}
+{{ $i := sub ($currentSection | len) 1 }}
+{{/* So we can only show this menu if there are one or more other entries  */}}
+{{ if ge $i 1 }}
+<div class="flex items-start items-stretch nl3 nr3 flex-wrap">
+  {{ range $currentSection }}
+    <div class="ph3 w-100 w-50-m w-third-l">
+      <a href="{{.URL}}" class="link db br2 bg-white ba b--black-20 mb4">
+        <div class="aspect-ratio w-100 aspect-ratio--16x9 mb4">
+          <div class=" aspect-ratio--object z-2 bg-center cover" style="background-image: url(' {{ (trim .Params.featured_image "/") | absURL }}')"></div>
+        </div> 
+        <h3 class="ttu tracked green tc">{{.Title }}</h3> 
+      </a>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

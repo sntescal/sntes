@@ -1,23 +1,24 @@
 {{/* Get the current page's URL so we can compare it to the list below */}}
 {{ $currentPageUrl := .URL }}
+{{ $currentPage := . }}
 {{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
-{{ $currentSection := (where .Site.RegularPages "Section" .Section) }}
+{{ $currentSection := ( .Site.Pages ) }}
 {{/* Get the number of entries of  $currentSection and subtract 1 */}}
 {{ $i := sub ($currentSection | len) 1 }}
 {{/* So we can only show this menu if there are one or more other entries  */}}
 {{ if ge $i 1 }}
-<div class="w-100 w-60-m w-30-l br2 ">
-  <div class="bb bw1 pa2 ml4 red">
-    <a href="/product" class="link f6 f3-ns ttu tracked navy b">Products</a>
-  </div>
-  <ul class="list-reset mb3" style="list-style: none;">
-    {{ range sort $currentSection "Params.order" }}
-      <li>
-        <a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps">
-          {{ .Title }}
-        </a>
-      </li>
-    {{ end }}
-  </ul>
+<div class="w-100 w-30-m w-30-l br2 mr4-l">
+	<div class="bb bw1 pa2 red">
+		<a href="/products" class="link f6 f3-ns ttu tracked navy b">Products</a>
+	</div>
+	<ul class="list-reset mb3 pl0" style="list-style: none;">
+		{{ range $currentSection }}
+		<li>
+			<a href="{{ .URL }}" class="sidelink{{ if eq $currentPageUrl .URL }} active{{end}} link navy caps">
+				{{ .Title }}
+			</a>
+		</li>
+		{{ end }}
+	</ul>
 </div>
 {{ end }}

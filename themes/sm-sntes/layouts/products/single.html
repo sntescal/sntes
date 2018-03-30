@@ -3,7 +3,7 @@
 {{ $brands := .Site.Data.brands.brands }}
 <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap 
   flex-nowrap-l pb5">
-  {{ partial "menu-contextual.html" . }}
+  {{ partial "menu-single.html" . }}
   <div class="flex items-start items-stretch flex-wrap w-100 
     w-70-l nl3 nr3">
     {{range .Params.items}}

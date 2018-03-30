@@ -2,7 +2,7 @@
 {{ $currentPageUrl := .URL }}
 {{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
 {{ $required_section := .Section }}
-{{ $required_parent := .Parent }}
+{{ $required_parent := .Parent.Parent }}
 {{ $currentSection := ( index .Site.Pages ) }}
 {{ $all_pages := .Site.Pages }}
 {{/* Get the number of entries of  $currentSection and subtract 1 */}}
@@ -17,6 +17,7 @@
 		{{ range $currentSection }}
 		{{if eq .Parent $required_parent }}
 		{{ $required_title := .Title }}
+
 		
 		<li>
 			<i class="fa fa-caret-right absolute left-2 pv3 ph3 " aria-hidden="true" onclick="myFunction({{index ($required_title)}})"></i>
@@ -34,7 +35,8 @@
 			</ul>
 			{{ end }}
 			{{ end }}
-			{{ end }}	
+			{{ end }}
+			
 		</li>
 		{{ end }}
 		{{ end }}

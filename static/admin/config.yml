@@ -22,33 +22,5 @@ collections:
           fields:
             - {label: Image, name: image, widget: image}
         - {label: Content, name: body, widget: markdown}
-- label: "Data"
-  name: "data"
-  files:
-    - label: "Brands"
-      name: "brands"
-      file: "data/brands.yml"
-      fields:
-        - label: Brands
-          name: brands
-          widget: list
-          fields:
-            - {label: Name, name: name, widget: string}
-            - {label: Image, name: image, widget: image}
-    - label: "Awards"
-      name: "awards"
-      file: "data/awards.yml"
-      fields:
-        - label: Awards
-          name: awards
-          widget: list
-          fields:
-            - {label: Image, name: image, widget: image}
-    - label: "Meta"
-      name: "meta"
-      file: "data/meta.yml"
-      fields:
-        - {label: Page Background, name: background_image, widget: image}
-        - {label: Logo, name: logo, widget: image}
-        - {label: FB Cover, name: fb_cover, widget: image}
+
             

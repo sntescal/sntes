@@ -1,0 +1,35 @@
+<section class="pv5 bg-white ph3 ph4-m ph5-l">
+<script src="{{ "js/lory.min.js" | absURL }}"></script>
+<h2 class="f2 f1-ns w-100 f1 tc black ttu mt0">Brands</h2>
+{{ partial "separator.html" . }}
+<div class="slider js_variablewidth_brands variablewidth">
+  <div class="tc mb3">
+    <span class="js_prev prev bg-navy pa2 dib">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 501.5 501.5"><g><path fill="#fff" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
+    </span>
+
+    <span class="js_next next bg-navy pa2 dib">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 501.5 501.5"><g><path fill="#fff" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
+    </span>
+  </div>
+  <div class="frame js_frame" style="margin-top:">
+    <ul class="slides js_slides">
+      {{ range .Site.Data.brands.brands }}
+      <li>
+        <div class="aspect-ratio aspect-ratio--16x9 br2 br--top w-100 overflow-hidden z-1">
+          <div class="aspect-ratio--object contain bg-center" style="background-image: url('{{ ( trim .image "/" ) | absURL}}')"></div>
+        </div>
+      </li>
+        {{end}}
+    </ul>
+  </div>
+</div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var variableWidth = document.querySelector('.js_variablewidth_brands');
+    lory(variableWidth, {
+    rewind: true
+    });
+  });
+</script>

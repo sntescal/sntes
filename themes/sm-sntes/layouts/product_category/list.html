@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+{{ partial "page_title.html" . }}
+  <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap 
+   flex-nowrap-l pb5">
+   {{ partial "menu-contextual.html" . }}
+    <main class="w-100 w-70-m w-70-l">
+      <div class="content mb5">
+        {{ .Content }}
+      </div>
+      {{ partial "product_list.html" . }}
+    </main>
+  </div>
+{{ partial "footer-brand.html" . }}
+{{ partial "footer.html" . }}

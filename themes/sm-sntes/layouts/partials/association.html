@@ -1,0 +1,12 @@
+<div class="w-100 w-60-m w-40-l br2">
+  <div class="h3 mt0 mb2 pb1 caps bold navy ttu">
+    <h1 class="">associations</h1>
+    {{ range .Site.Data.associations.associations }}
+      <ul class="list">
+        <li class="green">
+          <input class="mr2" type="checkbox" id="" value="" checked disabled> {{ .name }}
+        </li>
+      </ul>
+    {{ end }}
+  </div>
+</div>

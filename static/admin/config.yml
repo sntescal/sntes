@@ -34,7 +34,7 @@ collections:
         - {label: Content, name: body, widget: markdown}
     - label: "Product"
       name: "product"
-      file: "content/product/_index.md"
+      file: "content/products/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}

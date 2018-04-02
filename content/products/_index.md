@@ -1,7 +1,7 @@
 ---
 title: Products
-seo_keywords: MRD Finance
-seo_description: MRD Finance
+seo_keywords: SNTES
+seo_description: SNTES
 featured_image: images/light.jpg
 ---
 

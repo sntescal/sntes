@@ -1,23 +1,31 @@
 {{ partial "header.html" . }}
 {{ partial "page_title.html" . }}
+{{ $brands := .Site.Data.brands.brands }}
 <div class="ph3 ph4-m ph5-l flex items-stretch items-start flex-wrap 
   flex-nowrap-l pb5">
-  <div class="flex items-start items-stretch flex-wrap justify-center mxn2 w-100 
-    w-70-l">
-    {{range .Params.list}}
-    <article class="br2 ba dark-gray b--black-10 mv4 w-100 mw5 
-      center">
-      <div class="aspect-ratio aspect-ratio--16x9 br2 br--top w-100 
-       overflow-hidden z-1">
-        <div class="aspect-ratio--object contain" style="background-image: url('{{ ( trim .image "/" ) | absURL}}')"></div>
+  {{ partial "menu-single.html" . }}
+  <div class="flex items-start items-stretch flex-wrap w-100 
+    w-70-l nl3 nr3">
+    {{range .Params.items}}
+    {{ $brand := .brand}}
+    <div class="w-100 w-50-m w-third-l ph3">
+      <div class="br2 ba dark-gray b--black-10 mv4">
+        {{ range $brands }}
+          {{ if eq .name $brand }}
+          <div class="tc">          
+            <img src="{{(trim .image "/") | absURL }}" style="height: 120px;">
+          </div>
+          {{ end }}
+        {{ end }}
+        <div class="pa2 ph3-ns pb3-ns">
+          <div class="link f6 lh-copy measure mt2 ttu tracked navy b"> {{ .brand }} </div>
+          <div class="link f6 gray"> {{ .description }} </div>
+        </div>
       </div>
-      <div class="pa2 ph3-ns pb3-ns">
-        <a href="/" class="link f6 lh-copy measure mt2 ttu tracked navy b"> {{ .title }} </p>
-      </div>
-    </article>
+    </div>
     {{end}}
   </div>
-  {{ partial "menu-contextual.html" . }}
+  
 </div>
 
 {{ partial "footer-brand.html" . }}

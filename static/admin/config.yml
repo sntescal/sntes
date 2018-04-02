@@ -4,6 +4,17 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
+- label: "Products"
+  name: "products"
+  folder: "content/product"
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - {label: Content, name: body, widget: markdown}
 - label: "Pages"
   name: "pages"
   files:
@@ -20,6 +31,16 @@ collections:
           widget: list
           fields:
             - {label: Image, name: image, widget: image}
+        - {label: Content, name: body, widget: markdown}
+    - label: "Product"
+      name: "product"
+      file: "content/product/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
         - {label: Content, name: body, widget: markdown}
     - label: "About"
       name: "about"

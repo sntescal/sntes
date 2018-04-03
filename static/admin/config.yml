@@ -7,12 +7,14 @@ collections:
 - label: "Cable Jointing Kits"
   name: "cables Jointing Kits"
   folder: "content/products/cable_jointing_kits"
+  filter: {field: "type", value: "products"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: string}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items

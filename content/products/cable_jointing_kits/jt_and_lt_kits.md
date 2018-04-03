@@ -3,6 +3,7 @@ title: "JT & LT Kits"
 seo_keywords: "SNTES"
 seo_description: "SNTES"
 featured_image: "images/product2.jpg"
+type: "products"
 items:
   - brand: "Havells"
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quae. Vero ea, blanditiis illum id. Libero eveniet explicabo nihil, maiores nisi ratione commodi vel natus dolorum laborum cum, praesentium quod."

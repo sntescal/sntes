@@ -26,12 +26,14 @@ collections:
 - label: "Cables And Wires"
   name: "cables and wires"
   folder: "content/products/cables_and_wires"
+  filter: {field: "type", value: "products"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: string}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -43,12 +45,14 @@ collections:
 - label: "Led Lighting"
   name: "led lighting"
   folder: "content/products/led_lighting"
+  filter: {field: "type", value: "products"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: string}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -60,12 +64,14 @@ collections:
 - label: "Lights And Light Fittings"
   name: "lights and light fittings"
   folder: "content/products/lights_and_light_fittings"
+  filter: {field: "type", value: "products"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Type, name: type, widget: string}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items

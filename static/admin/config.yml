@@ -4,6 +4,23 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
+- label: "Cable Jointing Kits"
+  name: "cables Jointing Kits"
+  folder: "content/products/cable_jointing_kits"
+  create: true
+  fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Seo Title, name: seo_title, widget: string, required: false}
+    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+    - {label: Seo Description, name: seo_description, widget: text, required: false}
+    - {label: Featured Image, name: featured_image, widget: image}
+    - label: Items
+          name: items
+          widget: list
+          fields:
+            - {label: Brand, name: brand, widget: string}
+            - {label: Description, name: description, widget: text}
+    - {label: Content, name: body, widget: markdown}
 - label: "Product Category"
   name: "product category"
   files:

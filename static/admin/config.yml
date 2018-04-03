@@ -14,7 +14,7 @@ collections:
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
-    - {label: Type, name: type, widget: string}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -33,7 +33,7 @@ collections:
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
-    - {label: Type, name: type, widget: string}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -52,7 +52,7 @@ collections:
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
-    - {label: Type, name: type, widget: string}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -71,7 +71,7 @@ collections:
     - {label: Seo Title, name: seo_title, widget: string, required: false}
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
-    - {label: Type, name: type, widget: string}
+    - {label: Type, name: type, widget: "hidden", default: "products"}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
@@ -92,7 +92,7 @@ collections:
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Type, name: type, widget: string}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
         - {label: Content, name: body, widget: markdown}
     - label: "Cables And Wires"
       name: "cables and wires"
@@ -103,7 +103,7 @@ collections:
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Type, name: type, widget: string}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
         - {label: Content, name: body, widget: markdown}
     - label: "Led Lighting"
       name: "led lighting"
@@ -114,7 +114,7 @@ collections:
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Type, name: type, widget: string}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
         - {label: Content, name: body, widget: markdown}
     - label: "Lights And Light Fittings"
       name: "lights and light fittings"
@@ -125,7 +125,7 @@ collections:
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
         - {label: Featured Image, name: featured_image, widget: image}
-        - {label: Type, name: type, widget: string}
+        - {label: Type, name: type, widget: "hidden", default: "product_category"}
         - {label: Content, name: body, widget: markdown}
 - label: "Pages"
   name: "pages"

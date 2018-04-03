@@ -7,7 +7,7 @@ collections:
 - label: "Cable Jointing Kits"
   name: "cables Jointing Kits"
   folder: "content/products/cable_jointing_kits"
-  filter: {field: "type", value: ""}
+  filter: {field: "title", value: "JT & LT Kits"}
   create: true
   fields:
     - {label: Title, name: title, widget: string}

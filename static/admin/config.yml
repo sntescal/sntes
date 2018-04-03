@@ -148,7 +148,6 @@ collections:
         - {label: Seo Title, name: seo_title, widget: string, required: false}
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
         - {label: Content, name: body, widget: markdown}
     - label: "About"
       name: "about"

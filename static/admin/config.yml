@@ -7,8 +7,8 @@ collections:
 - label: "Product Category"
   name: "product category"
   files:
-    - label: "cable_jointing_kits"
-      name: "Cables Jointing Kits"
+    - label: "Cable Jointing Kits"
+      name: "cables Jointing Kits"
       file: "content/products/cable_jointing_kits/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
@@ -18,7 +18,7 @@ collections:
         - {label: Featured Image, name: featured_image, widget: image}
         - {label: Type, name: type, widget: string}
         - {label: Content, name: body, widget: markdown}
-    - label: "cables_and_wires"
+    - label: "Cables And Wires"
       name: "cables and wires"
       file: "content/products/cables_and_wires/_index.md"
       fields:
@@ -29,7 +29,7 @@ collections:
         - {label: Featured Image, name: featured_image, widget: image}
         - {label: Type, name: type, widget: string}
         - {label: Content, name: body, widget: markdown}
-    - label: "led_lighting"
+    - label: "Led Lighting"
       name: "led lighting"
       file: "content/products/led_lighting/_index.md"
       fields:
@@ -40,7 +40,7 @@ collections:
         - {label: Featured Image, name: featured_image, widget: image}
         - {label: Type, name: type, widget: string}
         - {label: Content, name: body, widget: markdown}
-    - label: "lights_and_light_fittings"
+    - label: "Lights And Light Fittings"
       name: "lights and light fittings"
       file: "content/products/lights_and_light_fittings/_index.md"
       fields:

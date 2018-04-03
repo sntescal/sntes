@@ -15,11 +15,11 @@ collections:
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
-          name: items
-          widget: list
-          fields:
-            - {label: Brand, name: brand, widget: string}
-            - {label: Description, name: description, widget: text}
+      name: items
+      widget: list
+      fields:
+        - {label: Brand, name: brand, widget: string}
+        - {label: Description, name: description, widget: text}
     - {label: Content, name: body, widget: markdown}
 - label: "Product Category"
   name: "product category"

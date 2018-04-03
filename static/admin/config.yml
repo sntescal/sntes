@@ -15,14 +15,12 @@ collections:
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
-    - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
       widget: list
       fields:
         - {label: Brand, name: brand, widget: string}
         - {label: Description, name: description, widget: text}
-    - {label: Content, name: body, widget: markdown}
 - label: "Cables And Wires"
   name: "cables and wires"
   folder: "content/products/cables_and_wires"
@@ -34,14 +32,12 @@ collections:
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
-    - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
       widget: list
       fields:
         - {label: Brand, name: brand, widget: string}
         - {label: Description, name: description, widget: text}
-    - {label: Content, name: body, widget: markdown}
 - label: "Led Lighting"
   name: "led lighting"
   folder: "content/products/led_lighting"
@@ -53,14 +49,12 @@ collections:
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
-    - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
       widget: list
       fields:
         - {label: Brand, name: brand, widget: string}
         - {label: Description, name: description, widget: text}
-    - {label: Content, name: body, widget: markdown}
 - label: "Lights And Light Fittings"
   name: "lights and light fittings"
   folder: "content/products/lights_and_light_fittings"
@@ -72,14 +66,12 @@ collections:
     - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
     - {label: Seo Description, name: seo_description, widget: text, required: false}
     - {label: Type, name: type, widget: "hidden", default: "products"}
-    - {label: Featured Image, name: featured_image, widget: image}
     - label: Items
       name: items
       widget: list
       fields:
         - {label: Brand, name: brand, widget: string}
         - {label: Description, name: description, widget: text}
-    - {label: Content, name: body, widget: markdown}
 - label: "Product Category"
   name: "product category"
   files:
@@ -152,7 +144,6 @@ collections:
         - {label: Seo Title, name: seo_title, widget: string, required: false}
         - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
         - {label: Seo Description, name: seo_description, widget: text, required: false}
-        - {label: Featured Image, name: featured_image, widget: image}
         - {label: Content, name: body, widget: markdown}
     - label: "About"
       name: "about"

@@ -17,7 +17,6 @@
 		{{ range $currentSection }}
 		{{if eq .Parent $required_parent }}
 		{{ $required_title := .Title }}
-
 		
 		<li>
 			<i class="fa fa-caret-right absolute left-2 pv3 ph3 " aria-hidden="true" onclick="myFunction({{index ($required_title)}})"></i>
@@ -43,7 +42,7 @@
 	</ul>
 </div>
 {{ end }}
-<script>
+<!-- <script>
 function myFunction($data) {
 	
 var x = document.getElementById($data);
@@ -53,4 +52,4 @@ x.style.display = "block";
 x.style.display = "none";
 }
 }
-</script>
+</script> -->

@@ -4,23 +4,45 @@ backend:
 media_folder: "static/images"
 public_folder: "/images"
 collections:
-- label: "Products"
-  name: "products"
-  folder: "content/products"
-  create: true
-  fields:
-    - {label: Title, name: title, widget: string}
-    - {label: Seo Title, name: seo_title, widget: string, required: false}
-    - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
-    - {label: Seo Description, name: seo_description, widget: text, required: false}
-    - {label: Featured Image, name: featured_image, widget: image}
-    - {label: Content, name: body, widget: markdown}
 - label: "Product Category"
   name: "product category"
   files:
     - label: "cable_jointing_kits"
       name: "Cables Jointing Kits"
       file: "content/products/cable_jointing_kits/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: string}
+        - {label: Content, name: body, widget: markdown}
+    - label: "cables_and_wires"
+      name: "cables and wires"
+      file: "content/products/cables_and_wires/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: string}
+        - {label: Content, name: body, widget: markdown}
+    - label: "led_lighting"
+      name: "led lighting"
+      file: "content/products/led_lighting/_index.md"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Seo Title, name: seo_title, widget: string, required: false}
+        - {label: Seo Keywords, name: seo_keywords, widget: string, required: false}
+        - {label: Seo Description, name: seo_description, widget: text, required: false}
+        - {label: Featured Image, name: featured_image, widget: image}
+        - {label: Type, name: type, widget: string}
+        - {label: Content, name: body, widget: markdown}
+    - label: "lights_and_light_fittings"
+      name: "lights and light fittings"
+      file: "content/products/lights_and_light_fittings/_index.md"
       fields:
         - {label: Title, name: title, widget: string}
         - {label: Seo Title, name: seo_title, widget: string, required: false}
